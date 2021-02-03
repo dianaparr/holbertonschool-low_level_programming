@@ -1,1 +1,3 @@
-# holbertonschool-low_level_programming
+### My first steps on lenguage C
+
+In construction...
