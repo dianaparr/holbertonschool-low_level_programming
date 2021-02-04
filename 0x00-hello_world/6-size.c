@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Prints some sentence
  *
- * Return: Always 0 (Success)
+ * Return: 0 before prints the sentence
  */
+
 int main(void)
 {
 	char c;
