@@ -5,9 +5,8 @@
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
-{	
+{
 	char c;
 	int i;
 	long int l;
@@ -24,4 +23,5 @@ int main(void)
 	printf(" byte(s)\n");
 	printf("Size of a float: %lu", sizeof(f));
 	return (0);
+
 }
