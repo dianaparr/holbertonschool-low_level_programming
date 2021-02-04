@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - Prints some sentence
+ * main - Entry point
  *
- * return - 0 before prints the sentence
+ * Return: Always 0 (Sucess)
  */
 
-int main (void)
+int main(void)
 {
 	char c;
 	int i;
