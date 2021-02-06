@@ -14,7 +14,7 @@ int main(void)
 	for (tenth = '0'; tenth <= '9'; tenth++)
 	{
 		for (unit = '0'; unit <= '9'; unit++)
-		{			
+		{
 			putchar(tenth);
 			putchar(unit);
 			if (tenth != '9' || unit != '9')
