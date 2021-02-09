@@ -9,7 +9,7 @@
  *
  **/
 
-int main(void)
+int main(void);
 {
 	_putchar(72);
 	_putchar(111);
