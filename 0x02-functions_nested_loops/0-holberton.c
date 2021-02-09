@@ -1,15 +1,13 @@
 #include "holberton.h"
 
 /**
- * _putchar - writes the character c to stdout
- *
  * main - Entry point
  *
  * Return: Always 0 (Success)
  *
  **/
 
-int main(void);
+int main(void)
 {
 	_putchar(72);
 	_putchar(111);
