@@ -1,10 +1,9 @@
 #include "holberton.h"
 
 /**
- * 
- * main - check the code for Holberton School students.
- *
- * print_alphabet_x10 - Entry point
+ *print_alphabet_x10 - prints the alphabet
+ *void - Entry point
+ *Return: Always 0
  *
  **/
 
@@ -19,6 +18,6 @@ void print_alphabet_x10(void)
 	{
 		_putchar(alpha);
 	}
-	        _putchar('\n');
+	_putchar('\n');
 	}
 }
