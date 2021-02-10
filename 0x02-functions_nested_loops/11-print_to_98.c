@@ -12,12 +12,12 @@ void print_to_98(int n)
 	int nat;
 
 	nat = n;
-	while (nat < 99)
+	while (nat <= 98)
 	{
 		printf("%d, ", nat);
 		nat++;
 	}
-	if (nat <= 98)
+	if (nat == 98)
 	{
 		printf("%d", nat);
 	}
