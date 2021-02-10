@@ -9,16 +9,25 @@
 
 void print_to_98(int n)
 {
-	int nat;
-
-	nat = n;
-	while (nat <= 98)
+	while (n != 98)
 	{
-		printf("%d, ", nat);
-		nat++;
+                if (n < 98)
+		{
+			printf("%d, ", n);
+			n++;
+		}
+		else if (n > 98)
+		{
+			printf("%d, ", n);
+			n--;
+		}
+		else
+		{
+			printf("%d, ", n);
+		}
 	}
-	if (nat == 98)
+	if (n == 98)
 	{
-		printf("%d", nat);
+		printf("%d\n", n);
 	}
 }
