@@ -2,6 +2,7 @@
 
 /**
  *print_times_table - prints the 15 times table
+ *@n: number times table
  *Return: 0 always
  **/
 
@@ -33,7 +34,7 @@ void print_times_table(int n)
 			{
 				_putchar(' ');
 				_putchar(o / 10 + '0');
-			        _putchar(o % 10 + '0');
+				_putchar(o % 10 + '0');
 			}
 			else if (o > 99)
 			{
