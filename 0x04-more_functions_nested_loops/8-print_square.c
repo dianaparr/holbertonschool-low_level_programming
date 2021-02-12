@@ -2,7 +2,7 @@
 
 /**
  *print_square - prints square
- *@n: number
+ *@size: size of the square
  *Return: 0 always
 **/
 
