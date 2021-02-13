@@ -2,7 +2,6 @@
 
 /**
  *main - entry point
- *@a: Print number or characters
  *Return: 0 always
 **/
 
