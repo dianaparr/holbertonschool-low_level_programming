@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- *swap_int - function swaps the values
- *@d: variable temporal to make the exchange
- * *Return: Always 0.
+ *swap_int - swaps the values
+ *@a: integer for swap
+ *@b: integer for swap
+ *Return: Always 0.
  */
 
 void swap_int(int *a, int *b)
