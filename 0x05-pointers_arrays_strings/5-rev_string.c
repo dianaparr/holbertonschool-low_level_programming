@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include "_putchar.c"
-#include <stdio.h>
 
 /**
  *rev_string - print string reverse
