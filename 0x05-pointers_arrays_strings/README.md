@@ -1,6 +1,6 @@
-#0x05. C - Pointers, arrays and strings
+# 0x05. C - Pointers, arrays and strings
 
-##Learning Objectives
+## Learning Objectives
 
 **General**
 	- What are pointers and how to use them
@@ -9,7 +9,7 @@
 	- How to use strings and how to manipulate them
 	- Scope of variables
 
-##Tasks
+## Tasks
 
 **0. 98 Battery st.**
      Write a function that takes a pointer to an int as parameter and updates the value it points to to 98.
