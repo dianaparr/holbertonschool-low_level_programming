@@ -18,5 +18,5 @@ char *_strchr(char *s, char c)
 			return (s + i);    /* return a pointer to the character c */
 		}
 	}
-	return ('\0');    /* return NULL if the character is not found  */
+	return (NULL);    /* return NULL if the character is not found  */
 }
