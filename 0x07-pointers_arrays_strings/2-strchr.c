@@ -9,7 +9,7 @@
 
 char *_strchr(char *s, char c)
 {
-	unsigned int i = 0;
+	int i = 0;
 
 	for (; s[i] != '\0'; i++)    /* string examined, without character NULL */
 	{
@@ -18,5 +18,5 @@ char *_strchr(char *s, char c)
 			return (s + i);    /* return a pointer to the character c */
 		}
 	}
-	return (NULL);    /* return NULL if the character is not found  */
+	return ('\0');    /* return NULL if the character is not found  */
 }
