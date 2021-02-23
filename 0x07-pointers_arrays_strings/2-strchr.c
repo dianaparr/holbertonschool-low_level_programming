@@ -18,5 +18,9 @@ char *_strchr(char *s, char c)
 			return (&s[i]);    /* return a pointer to the character c */
 		}
 	}
+	if (s[i] == c)
+	{
+		return (&s[i]);
+	}
 	return ('\0');    /* return NULL if the character is not found  */
 }
