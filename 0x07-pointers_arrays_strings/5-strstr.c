@@ -9,17 +9,35 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i = 0, j;
+	int i = 0, j, n = 0;   /* n: contar coincidencias de las letras */
+	int len;
 
-	for (; needle[i] != '\0'; i++)
+	for (len = 0; needle[len] != '\0'; len++)
+	{}
+	for (; haystack[i] != '\0'; i++)
 	{
-		for (j = 0; haystack[j] != '\0'; j++)
+		if (haystack[i] == ' ')
 		{
-			if (needle[i] == haystack[j])
+			n = 0;
+		}
+		for (j = 0; needle[j] != '\0'; j++)
+		{
+			if (needle[j] == haystack[i])
 			{
-				return (&needle[i]);
+				n++;
+			}
+			if (n == len)
+			{
+				return (&(haystack[i - j]));
 			}
 		}
 	}
-	return ('\0');    /* return NULL if the character is not found  */
+	if (needle[0] == '\0')
+	{
+		return (&(haystack[0]));
+	}
+	else
+	{
+		return ('\0');    /* return NULL if the character is not found  */
+	}
 }
