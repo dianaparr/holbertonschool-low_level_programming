@@ -10,4 +10,6 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 int aux(int num, int i);
 int aux_prim(int num, int i);
+int strlen_palindr(char *s);
+int palindrome_yeah (char *s, int j, int i);
 
