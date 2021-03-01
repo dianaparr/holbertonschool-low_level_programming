@@ -1,4 +1,3 @@
-/* All prototypes of the functions */
 #ifndef HEADER_H
 #define HEADER_H
 
