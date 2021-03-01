@@ -1,6 +1,6 @@
 /* All prototypes of the functions */
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef HEADER_HOLBERTON
+#define HEADER_HOLBERTON
 
 int _putchar(char c);
 int _islower(int c);
