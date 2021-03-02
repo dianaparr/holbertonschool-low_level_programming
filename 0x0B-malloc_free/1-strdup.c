@@ -22,13 +22,14 @@ char *_strdup(char *str)
 		len_str++;
 	}
 	p = malloc((len_str + 1) * sizeof(char));
-	for (i = 0; i <= len_str; i++)
-	{
-		p[i] = str[i];   /* copy of a string given as a parameter */
-	}
 	if (p == NULL)   /*checks the memory */
 	{
 		return (NULL);
 	}
+	for (i = 0; i <= len_str; i++)
+	{
+		p[i] = str[i];   /* copy of a string given as a parameter */
+	}
+
 	return (p);     /* return to a pointer */
 }
