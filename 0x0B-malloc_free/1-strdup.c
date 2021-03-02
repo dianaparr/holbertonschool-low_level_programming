@@ -12,7 +12,6 @@ char *_strdup(char *str)
 	int i;
 	int len_str = 0;
 
-	p = malloc((len_str + 1) * sizeof(char));
 
 	if (str == NULL)  /* checks the memory */
 	{
@@ -22,6 +21,7 @@ char *_strdup(char *str)
 	{
 		len_str++;
 	}
+	p = malloc((len_str + 1) * sizeof(char));
 	for (i = 0; i < len_str; i++)
 	{
 		p[i] = str[i];   /* copy of a string given as a parameter */
