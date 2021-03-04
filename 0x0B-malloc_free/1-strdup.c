@@ -3,7 +3,7 @@
 /**
  *_strdup - function duplicate of the string
  *@str: duplicating string
- *Return: pointer to str or NULL (if it fails)
+ *Return: pointer to p or NULL (if it fails)
  */
 
 char *_strdup(char *str)
