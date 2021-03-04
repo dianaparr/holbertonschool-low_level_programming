@@ -4,7 +4,7 @@
 /**
  *argstostr - concatenates all the arguments
  *@ac: type int
- *@av: type char
+ *@av: double pointer type char
  *Return: pointer to concat or NULL (if it fails)
  */
 
@@ -44,9 +44,15 @@ char *argstostr(int ac, char **av)
 		l++;
 		m++;
 	}
-	concat[a + ac - 1] = '\0';
+	concat[a + ac] = '\0';
 	return (concat);
 }
+
+/**
+ *len_str - length of each argument
+ *@s: pointer type char
+ *Return: c
+ */
 
 int len_str(char *s)
 {
