@@ -24,7 +24,6 @@ char *argstostr(int ac, char **av)
 	concat = malloc((a + ac) * sizeof(char));
 	if (concat == NULL)   /* check */
 	{
-		free(concat);
 		return (NULL);
 	}
 	while (m < ac)    /* recorre cada argumento */
@@ -43,7 +42,7 @@ char *argstostr(int ac, char **av)
 		l++;
 		m++;
 	}
-	concat[a + ac] = '\0';
+	concat[a + ac + 1] = '\0';
 	return (concat);
 }
 
