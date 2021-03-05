@@ -14,7 +14,11 @@ char *argstostr(int ac, char **av)
 	int m = 0, p = 0, a = 0, l = 0;
 	char *concat;
 
-	if (ac == 0 || av == NULL)
+	if (ac == 0)
+	{
+		return (NULL);
+	}
+	if (av == NULL)
 	{
 		return (NULL);
 	}
