@@ -11,7 +11,7 @@
 char *argstostr(int ac, char **av)
 {
 	int n = 0;   /* iterador para longitud de cada argumento */
-	int m = 0, p = 0, a = 0, l = 0;
+	int m = 0, p = 0, a = 1, l = 0;
 	char *concat;
 
 	if (ac == 0 || av == NULL)
@@ -42,7 +42,7 @@ char *argstostr(int ac, char **av)
 		l++;
 		m++;
 	}
-	concat[a + ac + 1] = '\0';
+	concat[a + ac - 1] = '\0';
 	return (concat);
 }
 
