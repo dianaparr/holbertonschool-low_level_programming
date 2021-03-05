@@ -14,14 +14,8 @@ char *argstostr(int ac, char **av)
 	int m = 0, p = 0, a = 0, l = 0;
 	char *concat;
 
-	if (ac == 0)
-	{
+	if (ac == 0 || av == NULL)
 		return (NULL);
-	}
-	if (av == NULL)
-	{
-		return (NULL);
-	}
 	while (n < ac)    /* longitud de cada argumento  */
 	{
 		a = a + len_str(av[n]);
@@ -30,6 +24,7 @@ char *argstostr(int ac, char **av)
 	concat = malloc((a + ac) * sizeof(char));
 	if (concat == NULL)   /* check */
 	{
+		free(concat);
 		return (NULL);
 	}
 	while (m < ac)    /* recorre cada argumento */
