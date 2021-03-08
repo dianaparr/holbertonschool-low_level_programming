@@ -4,8 +4,8 @@
 /**
  * struct dog - name of the structure
  * @name: pointer type char
- * @owner: pointer type char
  * @age: type float
+ * @owner: pointer type char
  *
  * Description: structure type with the elements name, owner and age
  */
@@ -13,8 +13,8 @@
 struct dog
 {
 	char *name;
-	char *owner;
 	float age;
-}
+	char *owner;
+};
 
 #endif /* HEADER_H */
