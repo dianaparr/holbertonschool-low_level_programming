@@ -15,8 +15,8 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (d != 0)   /* If the elements of this structure are initialized, then.. */
 	{
-		d->name = name;
+		(*d).name = name;   /* another form */
 		d->age = age;
-		d->owner = owner;
+		(*d).owner = owner;
 	}
 }
