@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+#include <stdarg.h>
 
 /**
  *print_list - function that print a list
