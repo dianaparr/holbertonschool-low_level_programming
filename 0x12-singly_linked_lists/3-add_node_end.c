@@ -12,11 +12,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *new_n, *last_n;
 	unsigned int len = 0;
 
+	while (str[len] != '\0')   /* lenght str */
+	{
+		len++;
+	}
 	new_n = malloc(sizeof(list_t));
 	if (new_n == NULL)   /* check memory allocated */
 		return (NULL);
-	for (; str[len] != '\0'; len++)   /* lenght str */
-	{}
 	new_n->str = strdup(str);   /* str duplication */
 	new_n->len = len;
 	new_n->next = NULL; /* new_n will be the last node */
@@ -33,5 +35,5 @@ list_t *add_node_end(list_t **head, const char *str)
 		}
 		last_n->next = new_n;  /* tail assignment by new node */
 	}
-	return (*head);
+	return (last_n);
 }
