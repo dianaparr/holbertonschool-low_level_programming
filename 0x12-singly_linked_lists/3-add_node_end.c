@@ -36,5 +36,5 @@ list_t *add_node_end(list_t **head, const char *str)
 		}
 		last_n->next = new_n;  /* tail assignment by new node */
 	}
-	return (last_n);
+	return (*head);
 }
