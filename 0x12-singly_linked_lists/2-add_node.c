@@ -12,13 +12,13 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *new_n;
 	unsigned int len = 0;
 
-	new_n = malloc(sizeof(list_t));
-	if (new_n == NULL)   /* check memory allocated */
-		return (NULL);
 	while (str[len] != '\0') /* lenght str */
 	{
 		len++;
 	}
+	new_n = malloc(sizeof(list_t));
+	if (new_n == NULL)   /* check memory allocated */
+		return (NULL);
 	new_n->str = strdup(str);   /* str duplication */
 	new_n->len = len;
 	if (*head == NULL)
