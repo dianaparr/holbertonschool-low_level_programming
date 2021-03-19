@@ -11,7 +11,7 @@
 size_t print_list(const list_t *h)
 {
 	/* count number elements */
-	int counter_elemt = 0;
+	int c_elemt = 0;
 
 	/* data empty */
 	if (h == NULL)
@@ -26,7 +26,7 @@ size_t print_list(const list_t *h)
 			printf("[%d] %s\n", h->len, h->str);
 		/* until h is the last node */
 		h = h->next;
-		counter_elemt++;
+		c_elemt++;
 	}
-	return (counter_elemt);
+	return (c_elemt);
 }
