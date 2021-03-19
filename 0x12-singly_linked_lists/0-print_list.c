@@ -8,8 +8,10 @@
 
 size_t print_list(const list_t *h)
 {
-	unsigned int counter_elem = 0; /* count number elements */
+	int counter_elem = 0; /* count number elements */
 
+	if (h == NULL) /* data empty */
+		return (0);
 	while (h != NULL)
 	{
 		if (h->str == NULL)
