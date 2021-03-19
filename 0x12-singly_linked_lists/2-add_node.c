@@ -15,8 +15,10 @@ list_t *add_node(list_t **head, const char *str)
 	new_n = malloc(sizeof(list_t));
 	if (new_n == NULL)   /* check memory allocated */
 		return (NULL);
-	for (; str[len] != '\0'; len++)   /* lenght str */
-	{}
+	while (str[len] != '\0') /* lenght str */
+	{
+		len++;
+	}
 	new_n->str = strdup(str);   /* str duplication */
 	new_n->len = len;
 	if (*head == NULL)
