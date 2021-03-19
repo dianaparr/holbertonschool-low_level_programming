@@ -10,9 +10,11 @@
 
 size_t print_list(const list_t *h)
 {
-	int counter_elem = 0; /* count number elements */
+	/* count number elements */
+	int counter_elem = 0;
 
-	if (h == NULL) /* data empty */
+	/* data empty */
+	if (h == NULL)
 		return (0);
 	while (h != NULL)
 	{
@@ -22,7 +24,8 @@ size_t print_list(const list_t *h)
 		}
 		else
 			printf("[%d] %s\n", h->len, h->str);
-		h = h->next; /* until h is the last node */
+		/* until h is the last node */
+		h = h->next;
 		counter_elem++;
 	}
 	return (counter_elem);
