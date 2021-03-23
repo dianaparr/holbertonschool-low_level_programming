@@ -19,6 +19,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 	/* new node in data (type const int) */
 	new_n->n = n;
+	if (idx == 0)
+	{
+		new_n->next = *head;
+		*head = new_n;
+		return (new_n);
+	}
 	/* traverse to the n-1 position */
 	for (; counter < (idx - 1); counter++)
 	{
