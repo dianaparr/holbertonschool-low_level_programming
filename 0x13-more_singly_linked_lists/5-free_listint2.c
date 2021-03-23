@@ -9,7 +9,7 @@ void free_listint2(listint_t **head)
 {
 	listint_t *ptr_temp;
 
-	if (*head != NULL)
+	while (*head != NULL)
 	{
 		/* store next pointer before freeing the node */
 		ptr_temp = (*head)->next;
