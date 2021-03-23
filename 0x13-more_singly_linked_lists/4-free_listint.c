@@ -11,8 +11,9 @@ void free_listint(listint_t *head)
 
 	if (head != NULL) /* list not empty */
 	{
-		ptr_temp = head;
-		head = head->next;
-		free(ptr_temp);
+		 /* not lose access to the rest nodes */
+		ptr_temp = head->next;
+		free(head);
+		head = ptr_temp;
 	}
 }
