@@ -22,9 +22,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/* traverse to the n-1 position */
 	for (; counter < (idx - 1); counter++)
 	{
-		ptr_temp = ptr_temp->next;
 		if (ptr_temp == NULL)
 			return (NULL);
+		ptr_temp = ptr_temp->next;
 	}
 	/* the new node must point to the same node pointed to by the n-1 node */
 	new_n->next = ptr_temp->next;
