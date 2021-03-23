@@ -7,7 +7,7 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	unsigned int c_elemt = 0;
+	unsigned int counter = 0;
 
 	if (h == NULL)
 		return (0);
@@ -17,7 +17,7 @@ size_t print_listint(const listint_t *h)
 		printf("%d\n", h->n);
 		/* print linked list form the given node */
 		h = h->next;
-		c_elemt++;
+		counter++;
 	}
-	return (c_elemt);
+	return (counter);
 }
