@@ -8,7 +8,7 @@
 size_t listint_len(const listint_t *h)
 {
 	/* counter number elements of type unsigned int */
-	unsigned int counter_elem = 0;
+	unsigned int counter = 0;
 
 	/* if list empty...*/
 	if (h == NULL)
@@ -17,7 +17,7 @@ size_t listint_len(const listint_t *h)
 	{
 		/* until h is the last node */
 		h = h->next;
-		counter_elem++;
+		counter++;
 	}
-	return (counter_elem);
+	return (counter);
 }
