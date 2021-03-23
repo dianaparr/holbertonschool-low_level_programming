@@ -9,7 +9,7 @@ void free_listint(listint_t *head)
 {
 	listint_t *ptr_temp;
 
-	if (head != NULL) /* list not empty */
+	while (head != NULL) /* list not empty */
 	{
 		 /* not lose access to the rest nodes */
 		ptr_temp = head->next;
