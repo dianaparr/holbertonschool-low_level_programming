@@ -14,6 +14,8 @@
 * What is a system call
 * What is the difference between a function and a system call
 
+### Tip: always prefer using symbolic constants (POSIX) vs numbers when it makes sense. 
+
 ## Tasks
 **0. Tread lightly, she is near:**
 Write a function that reads a text file and prints it to the POSIX standard output.
