@@ -26,9 +26,9 @@ int open_and_read_from(const char *av, char *buff)
 		exit(98);
 	}
 	close_from = close(from_file);
-	if (close_from == -1)
+	if (close_from < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from_file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", close_from);
 		exit(100);
 	}
 	return (read_file);
@@ -74,7 +74,7 @@ int main(int ac, char **av)
 	close_dest = close(dest_file);
 	if (close_dest == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", dest_file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", close_dest);
 		exit(100);
 	}
 	return (0);
