@@ -22,6 +22,7 @@ int open_and_read_from(const char *av, char *buff)
 	if (read_file == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av);
+		close(from_file);
 		exit(98);
 	}
 	close_from = close(from_file);
@@ -59,7 +60,10 @@ int main(int ac, char **av)
 	}
 	buff = malloc(sizeof(char) * 1024);
 	if (buff == NULL) /* check allocate buffer */
+	{
+		close(dest_file);
 		return (0);
+	}
 	/* write */
 	write_file = write(dest_file, buff, open_and_read_from(av[1], buff));
 	if (write_file == -1)
