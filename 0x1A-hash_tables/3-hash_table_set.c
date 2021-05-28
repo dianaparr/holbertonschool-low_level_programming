@@ -32,7 +32,7 @@ hash_node_t *add_node_begin(hash_node_t *h, const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *ptr_new_node = NULL;
-	unsigned int index = 0;
+	unsigned long int index = 0;
 
 	/*key can not be an empty string*/
 	if (strlen(key) == 0)
