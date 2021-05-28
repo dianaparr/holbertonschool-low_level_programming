@@ -15,7 +15,8 @@ hash_node_t *add_node_begin(hash_node_t *h, const char *key, const char *value)
 	if (new_node_begin == NULL)
 		return (NULL);
 	new_node_begin->key = strdup(key);
-	new_node_begin->value = strdup(value);
+	if (value != NULL)
+		new_node_begin->value = strdup(value);
 	new_node_begin->next = h; /*array filling head of the linked list*/
 	h = new_node_begin;
 	return (h);
@@ -36,6 +37,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	/*key can not be an empty string*/
 	if (strlen(key) == 0)
+		return (0);
+	if (ht == NULL || key == NULL)
 		return (0);
 	/*compute index (hash value of key)*/
 	index = key_index((const unsigned char *)key, ht->size);
