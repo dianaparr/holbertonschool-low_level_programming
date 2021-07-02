@@ -1,5 +1,4 @@
-TARGET = holberton
 CC = gcc
 SRC = main.c holberton.c
-$(TARGET) : $(SRC)
-	$(CC) $(SRC) -o $(TARGET)
+holberton : $(SRC)
+	$(CC) $(SRC) -o holberton
