@@ -5,7 +5,8 @@ NAME = holberton
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all: $(OBJ)
+.PHONY = all
+all: $(SRC) $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 clean:
 	$(RM) *~ $(NAME)
@@ -14,6 +15,5 @@ oclean:
 fclean:
 	$(RM) *~ $(NAME)
 	$(RM) $(OBJ)
-re:
+re: all #prerequis is a rule
 	$(RM) $(OBJ)
-	$(MAKE) $(CFLAGS) all -f 3-Makefile
