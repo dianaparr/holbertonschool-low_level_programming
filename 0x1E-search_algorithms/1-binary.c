@@ -29,26 +29,25 @@ int binary_search(int *array, size_t size, int value)
 		/* with the target value. */
 		if (array[middle_elm] == value)
 			return (middle_elm);
-		/* Two cases to search with relation to one target value and position in the array */
+		/* Two cases to search with relation to one target value and position */
+		/* in the array */
 		else if (array[middle_elm] < value)
 			left_elm = middle_elm + 1;
 		else
 			right_elm = middle_elm - 1;
 	}
+	/* print if he case search is the last element of the array */
 	printf("Searching in array: %d\n", array[right_elm]);
 	if (array[right_elm] == value)
 		return (right_elm);
-
 	return (-1);
 }
 
 /**
  * print_array - for print elements of the array
  * @array: pointer to the first element of the array
- * @
- * @
- *
- * Return: the first value index where value is located
+ * @right_elm: last element of the array (size - 1)
+ * @left_elm: first element of the array (array[0])
  */
 void print_array(int *array, int right_elm, int left_elm)
 {
