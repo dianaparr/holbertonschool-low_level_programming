@@ -10,22 +10,23 @@
  */
 int linear_search(int *array, size_t size, int value)
 {
-    unsigned int iterator = 0;
-    int search_value = 0;
+	unsigned int iterator = 0;
+	int search_value = 0;
 
-    if (value == '\0' || array == NULL)
-        return (-1);
+	if (value == '\0' || array == NULL)
+		return (-1);
 
-    while (iterator < size)
-    {
-        if (value == array[iterator])
-        {
-            /* if list in given position is equal to target value (L[i] == T) return iterator */
-            search_value = value;
-            return (search_value);
-        }
-        printf("Value checked array[%d] = [%d]\n", iterator, array[iterator]);
-        iterator++;
-    }
-    return(-1);
+	while (iterator < size)
+	{
+		printf("Value checked array[%d] = [%d]\n", iterator, array[iterator]);
+		if (value == array[iterator])
+		{
+			/* if list in given position is equal to target value */
+			/* (L[i] == T) return iterator */
+			search_value = value;
+			return (search_value);
+		}
+		iterator++;
+	}
+	return (-1);
 }
