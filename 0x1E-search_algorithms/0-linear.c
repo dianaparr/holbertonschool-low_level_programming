@@ -23,7 +23,7 @@ int linear_search(int *array, size_t size, int value)
 		{
 			/* if list in given position is equal to target value */
 			/* (L[i] == T) return iterator */
-			search_value = value;
+			search_value = iterator;
 			return (search_value);
 		}
 		iterator++;
