@@ -4,7 +4,7 @@
  * interpolation_search - search for a value in an sorted array of integers
  * @array: pointer to the first element of the array
  * @size: number elements of the array
- * @value: value to search for
+ * @value: value to search
  *
  * To determine the probe position, you can use : size_t pos =
  * low + (((double)(high - low) / (array[high] - array[low])) *
