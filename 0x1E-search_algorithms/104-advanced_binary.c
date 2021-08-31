@@ -47,12 +47,12 @@ int advanced_binary_recursion(int *array, int lower, int higher, int value)
 		print_array(array,  higher, lower);
 		/* Begins by comparing an element in the middle of the array */
 		/* with the target value. */
-		if (array[middle_elm] == value)
+		if (array[middle_elm] == value && array[middle_elm - 1] != value)
 			return (middle_elm);
 		/* Two cases to search with relation to one target value and position */
 		/* in the array */
-		else if (array[middle_elm] > value)
-			return (advanced_binary_recursion(array, lower, middle_elm - 1, value));
+		else if (array[middle_elm] >= value)
+			return (advanced_binary_recursion(array, lower, middle_elm, value));
 
 		return (advanced_binary_recursion(array, middle_elm + 1, higher, value));
 	}
