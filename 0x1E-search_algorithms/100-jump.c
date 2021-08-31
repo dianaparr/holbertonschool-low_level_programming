@@ -13,71 +13,28 @@
 int jump_search(int *array, size_t size, int value)
 {
 	unsigned int block_step = sqrt(size);
-    unsigned int min_number = 0;
     unsigned int prev = 0; /* initial value to the block, more to left in index */
-    int state_flag = 0;
+    unsigned int i = 0;
 
     if (array == NULL)
 		return (-1);
 
-    min_number = find_min(block_step, size);
-    while (array[min_number - 1] < value)
+    while (array[block_step] <= value && block_step < size)
     {
-        state_flag = 1;
         printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
         prev = block_step;
         block_step += sqrt(size);
-        if (prev >= size)
+        if (block_step > size - 1)
             return (-1);
-        min_number = find_min(block_step, size);
-    }
-    if (state_flag)
-    {
-        prev -= (int)sqrt(size);
-        block_step -= (int)sqrt(size);
     }
     printf("Value found between indexes [%d] and [%d]\n", prev, block_step);
-    while (prev < block_step)
+    i = prev;
+    while (i < block_step)
     {
         printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
-        prev++;
+        if (array[i] == value)
+            return (i);
+        i++;
     }
-    printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
-    if (state_flag)
-    {
-        prev += (int)sqrt(size);
-        block_step += (int)sqrt(size);
-    }
-
-    while (array[prev] < value)
-    {
-        printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
-        prev++;
-        min_number = find_min(block_step, size);
-        if (prev == min_number)
-            return (-1);
-    }
-
-    if (array[prev] == value)
-    {
-        printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
-        return (prev);
-    }
-
     return (-1);
-}
-
-/**
- * find_min - 
- * @step: pointer to the first element of the array
- * @min: less position in the block
- * @max: max position in the block
- *
- * Return: min value
- */
-int find_min(int min, int max)
-{
-    if (min < max)
-        return (min);
-    return (max);
 }
