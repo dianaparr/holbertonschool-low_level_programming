@@ -56,10 +56,6 @@ int advanced_binary_recursion(int *array, int lower, int higher, int value)
 
 		return (advanced_binary_recursion(array, middle_elm + 1, higher, value));
 	}
-	/* print if he case search is the last element of the array */
-	printf("Searching in array: %d\n", array[higher]);
-	if (array[higher] == value)
-		return (higher);
 	return (-1);
 }
 
