@@ -13,7 +13,7 @@ int linear_search(int *array, size_t size, int value)
 	unsigned int iterator = 0;
 	int search_value = 0;
 
-	if (value == '\0' || array == NULL)
+	if (array == NULL)
 		return (-1);
 
 	while (iterator < size)

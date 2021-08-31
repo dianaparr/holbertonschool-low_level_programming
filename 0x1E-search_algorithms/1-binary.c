@@ -17,7 +17,7 @@ int binary_search(int *array, size_t size, int value)
 	int right_elm = size - 1;
 	int middle_elm = 0;
 
-	if (value == '\0' || array == NULL)
+	if (array == NULL)
 		return (-1);
 
 	/* If L > R, the search terminates as unsuccessful */
