@@ -36,5 +36,6 @@ int binary_search_version2(int *array, int lower, int higher, int value);
 int advanced_binary(int *array, size_t size, int value);
 int advanced_binary_recursion(int *array, int lower, int higher, int value);
 listint_t *jump_list(listint_t *list, size_t size, int value);
+listint_t *linear_to_jump(listint_t *lower, listint_t *higher, int value);
 
 #endif /* HEADER_H */
