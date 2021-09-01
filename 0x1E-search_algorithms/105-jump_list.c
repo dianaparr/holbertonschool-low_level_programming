@@ -47,8 +47,13 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
         }
         higher = ptr_tmp;
     }
-    printf("Value checked at index [%ld] = [%d]\n", higher->index, higher->n);
-    printf("Value found between indexes [%ld] and [%ld]\n", lower->index, higher->index);
+    if (size > 3)
+    {
+        printf("Value checked at index [%ld] = [%d]\n", higher->index, higher->n);
+        printf("Value found between indexes [%ld] and [%ld]\n", lower->index, higher->index);
+    }
+    else
+        printf("Value found between indexes [0] and [%ld]\n", higher->index);
     /* Linear search */
     while (lower->index < higher->index)
     {
