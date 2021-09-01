@@ -36,20 +36,20 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	{
 		ptr_tmp = lower;
 		while (ptr_tmp->next)
-		{
 			ptr_tmp = ptr_tmp->next;
-		}
-		higher = ptr_tmp;
-	}
-	if (size > 3)
-	{
-		printf("Value checked at index [%ld] = [%d]\n", higher->index, higher->n);
-		printf("Value found between indexes [%ld] and [%ld]\n",
-		lower->index, higher->index);
+		printf("Value checked at index [%ld] = [%d]\n",
+		ptr_tmp->index, ptr_tmp->n);
+		printf("Value found between indexes [%d] and [%ld]\n",
+		lower->n, ptr_tmp->index);
+		return (linear_to_jump(lower, ptr_tmp, value));
 	}
 	else
-		printf("Value found between indexes [0] and [%ld]\n", higher->index);
-	return (linear_to_jump(lower, higher, value));
+	{
+		printf("Value checked at index [%ld] = [%d]\n",
+		higher->index, higher->n);
+		printf("Value found between indexes [%ld] and [%ld]\n",
+		lower->index, higher->index);
+		return (linear_to_jump(lower, higher, value)); }
 }
 
 /**
